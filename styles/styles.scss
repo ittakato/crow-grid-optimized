@@ -1,0 +1,132 @@
+@use './global';
+@use './normalize';
+@use './shared';
+
+@use './mixins' as m;
+
+.project-grid {
+  grid-row: 2 / span 1;
+
+  width: 100%;
+
+  display: grid;
+  gap: 0.65rem;
+
+  grid-template-areas:
+    'one one two'
+    'one one three'
+    'four five three'
+    'six seven seven'
+    'six seven seven'
+    'eight eight nine'
+    'eight eight nine';
+
+  @media only screen and (max-width: 1100px) {
+    grid-template-areas:
+      'one one'
+      'two three'
+      'four five'
+      'six six'
+      'seven eight'
+      'nine nine';
+
+    max-width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-areas:
+      'one one'
+      'two two'
+      'three three'
+      'four five'
+      'six six'
+      'seven seven'
+      'eight eight'
+      'nine nine';
+
+    max-width: 100%;
+  }
+}
+
+#crow-1 {
+  grid-area: one;
+}
+
+#crow-2 {
+  grid-area: two;
+}
+
+#crow-3 {
+  grid-area: three;
+}
+
+#crow-4 {
+  grid-area: four;
+}
+
+#crow-5 {
+  grid-area: five;
+}
+
+#crow-6 {
+  grid-area: six;
+}
+
+#crow-7 {
+  grid-area: seven;
+}
+
+#crow-8 {
+  grid-area: eight;
+}
+
+#crow-9 {
+  grid-area: nine;
+}
+
+.project {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 200ms ease;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    @include m.center-align;
+
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .body-container {
+    margin-top: 4rem;
+  }
+}

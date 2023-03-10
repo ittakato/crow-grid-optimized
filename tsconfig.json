@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    // "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    "module": "commonjs",
+    "rootDir": "./scripts",
+    // "moduleResolution": "node",
+    // "allowJs": true,
+    // "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    // "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true
+  },
+  "include": ["./scripts"]
+}
