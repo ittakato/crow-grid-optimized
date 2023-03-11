@@ -1,19 +1,43 @@
 {
   "name": "crow-grid",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crow Grid Optimized",
   "main": "index.js",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "build:dev": "webpack serve --config ./webpack/webpack.config.dev.js",
+    "build:prod": "webpack --config ./webpack/webpack.config.prod.js",
+    "build:analyze": "webpack --config ./webpack/webpack.config.analyze.js"
   },
   "private": "true",
   "keywords": [],
-  "author": "",
+  "author": "Itta Kato",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
+    "autoprefixer": "^10.4.14",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint": "^8.35.0",
-    "live-server": "^1.2.2"
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.1.0",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.7.3",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "purgecss-webpack-plugin": "^5.0.0",
+    "sass": "^1.59.2",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
   }
 }
